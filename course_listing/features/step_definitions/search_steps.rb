@@ -4,15 +4,6 @@ require 'page-object'
 include PageObject::PageFactory
 
 
-# Hooks
-Before do
-	@browser = Watir::Browser.new
-end
-After do
-	@browser.close
-end
-
-
 # When I search for CSCI 2994
 When /^I search for CSCI 2994$/ do
   visit_page(CourseSearch) do |page|
